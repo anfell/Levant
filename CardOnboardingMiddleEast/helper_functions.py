@@ -357,6 +357,7 @@ def download_document(base_url, crm_token, onboarding_token, application_name):
     headers = {
         "authorization": crm_token,
         'X-Objects-Token': documentToken
+
     }
     return requests.get(base_url + f"/glusterproxy/api/v1/file/download?filename= {documentPath}",
                         headers=headers)
